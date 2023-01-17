@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 10;
+} 
+.app {
+    outline: 2px solid rgb(162, 196, 10);
+    .link {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+:root {
+    --grey: #777;
+    --white: #ffffff;
+    --blue: #2879fe;
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+
+
+
+  }
+
+  /*======= MEDIA QUERIES MEDIUM SCREEN =====*/
+@media screen and (max-width:1024px) {
+}
+
+  
+  /*======= MEDIA QUERIES SMALL SCREEN =====*/
+@media screen and (max-width: 600px) {
+}
