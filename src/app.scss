@@ -3,11 +3,12 @@
     padding: 10;
 } 
 .app {
-    outline: 2px solid rgb(162, 196, 10);
+    //outline: 2px solid rgb(162, 196, 10);
     .link {
         color: inherit;
         text-decoration: none;
     }
+    
 }
 
 :root {
@@ -30,4 +31,5 @@
   
   /*======= MEDIA QUERIES SMALL SCREEN =====*/
 @media screen and (max-width: 600px) {
+
 }

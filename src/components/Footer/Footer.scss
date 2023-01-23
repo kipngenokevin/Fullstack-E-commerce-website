@@ -1,11 +1,102 @@
 
-/*========== MEDIUM DEVICE MEDIA QUERIES ===========*/
-@media  screen and (max-width:1024px) {
-   .footer{
-    max-width: 1024px;
+.footer {
+   outline: 2px solid red;
+   margin: 100px 200px 20px 200px;
+   .top {
+      outline: 2px solid green;
+      display: flex;
+      gap: 5rem;
+      
+      .item {
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+         flex: 1;
+         text-align: justify;
+         font-size: 14px;
+
+         h4 {
+            font-weight: 500;
+            color: #555;
+         }
+
+         span {
+            color: grey;
+         }
+      }
+   }
+   .bottom {
+      outline: 2px solid green;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 50px;
+      .left {
+         display: flex;
+         align-items: center;
+
+         .logo {
+            color: #2879fe;
+            font-size: 24px;
+            font-weight: bold;
+         }
+
+         .copyright {
+            margin-left: 1.8rem;
+            font-size: 1rem;
+            color: grey;
+         }
+      }
+      .right {
+
+         img {
+            height: 4rem;
+         }
+
+      }
    }
 }
-/*========== SMALL DEVICE MEDIA QUERIES ===========*/
-@media screeen and (max-width: 600px) {
 
+/*========== MEDIUM DEVICE MEDIA QUERIES ===========*/
+@media  screen and (max-width:1024px) {
+   .footer {
+      overflow: hidden;
+      outline: 2px solid greenyellow;
+      margin: 12px;
+      font-size: 8px;
+      .top {
+         gap: 0.2rem;
+         .item {
+            gap: 0.1rem;
+            text-align: left;
+         }
+      }
+
+      .bottom {
+         .left {
+            .logo {
+               font-size: 18px;
+            }
+         }
+         .right {
+            img {
+               height: 2rem;
+            }
+         }
+      }
+   
+   }
+ 
+}
+/*========== SMALL DEVICE MEDIA QUERIES ===========*/
+@media screen and (max-width: 600px) {
+   .footer {
+      overflow: hidden;
+      .top{
+         display: block;
+      }
+      .bottom {
+         display: inline-block;
+      }
+   }
 }
