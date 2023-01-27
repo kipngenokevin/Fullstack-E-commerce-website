@@ -24,11 +24,11 @@ const Navbar = () => {
       <div className='wrapper'>     
         <div className='left'>
           <div className="item">
-            <img src='/img/en.png' alt='English Pound' />
+            <img src='https://img.icons8.com/color/31/null/kenya.png' alt='English Pound' />
             <KeyboardArrowDownIcon />
           </div>
           <div className="item">
-            <span>USD</span>
+            <span>KES</span>
             <KeyboardArrowDownIcon />
           </div>
           <div className="item">

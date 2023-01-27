@@ -1,6 +1,6 @@
 .slider {
     height: calc(100vh - 80px);
-    width: 100vw;
+    max-width: 100vw;
     overflow: hidden; 
     position: relative;
     margin: auto;
@@ -37,5 +37,12 @@
             color: aliceblue;
             cursor: pointer;
         }
+    }
+}
+
+/*========== MEDIUM DEVICE MEDIA QUERIES ===========*/
+@media  screen and (max-width:1024px) {
+    .slider {
+        padding: 10px 0 0;
     }
 }
