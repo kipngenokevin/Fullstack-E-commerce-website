@@ -1,0 +1,41 @@
+.slider {
+    height: calc(100vh - 80px);
+    width: 100vw;
+    overflow: hidden; 
+    position: relative;
+    margin: auto;
+
+    .container {
+        width: 300vw;
+        display: flex;
+        height: 100%;
+        transition: all ease 1s;
+        
+        img {
+           width: 100vw;
+           object-fit: cover; 
+        }
+    }
+
+    .icons {
+        width: fit-content;
+        display: flex;
+        justify-content: space-around;
+        bottom: 4rem;
+        position: absolute;
+        left:0;
+        right: 0;
+        margin: auto;
+        //outline: solid palegoldenrod 2px ;
+        gap: 0.6rem;
+
+        .icon {
+            border: solid ghostwhite 2px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            color: aliceblue;
+            cursor: pointer;
+        }
+    }
+}
