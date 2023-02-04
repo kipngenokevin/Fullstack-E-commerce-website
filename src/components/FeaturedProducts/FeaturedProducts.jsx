@@ -7,40 +7,40 @@ const FeaturedProducts = ({type}) => {
   const data = [
     {
       id: 1,
-      img: 'https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      img: 'https://images.pexels.com/photos/7755459/pexels-photo-7755459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       img2: 'https://images.pexels.com/photos/8580001/pexels-photo-8580001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: '',
+      title: 'Summer Dress',
       isNew: true,
-      oldPrice: 1300,
-      price: 999
+      oldPrice: 13,
+      price: 9.99
     },
     {
       id: 2,
       img: 'https://images.pexels.com/photos/12698490/pexels-photo-12698490.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      title: '',
-      oldPrice: 2500,
-      price: 2300
+      title: 'Kimono dress',
+      oldPrice: 25,
+      price: 23
     },
     {
       id: 3,
       img: 'https://images.pexels.com/photos/12560384/pexels-photo-12560384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: '',
-      oldPrice: 3000,
-      price: 2900
+      title: 'Sheath dress',
+      oldPrice: 30,
+      price: 29
     },
     {
       id: 4,
       img: 'https://images.pexels.com/photos/9580324/pexels-photo-9580324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: '',
-      oldPrice: 15500,
-      price: 14450
+      title: 'Spotted top',
+      oldPrice: 15.5,
+      price: 14.45
     },
     {
       id: 5,
       img: 'https://images.pexels.com/photos/6794112/pexels-photo-6794112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: '',
-      oldPrice: 2300,
-      price: 1230
+      title: 'Ankara top',
+      oldPrice: 23,
+      price: 12.30
     },
     
   ]

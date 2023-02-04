@@ -1,4 +1,73 @@
 .featuredProducts {
     outline: solid goldenrod 2px;
-    margin: auto;
+    margin: 100px 200px;
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+
+        h1 {
+            flex: 2;
+        }
+
+        p {
+            flex: 3;
+            color: gray;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+    }
 }
+
+/*========== MEDIUM DEVICE MEDIA QUERIES ===========*/
+@media  screen and (max-width:1024px) {
+    .featuredProducts {
+        outline: solid red 2px;
+        overflow: scroll;
+        margin: 1rem 1rem;
+
+        .top{
+            h1 {
+                font-size: 1rem;
+            }
+            p{
+                font-size: 0.6rem;
+            }
+        }
+        
+    
+        .bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            gap: 4rem;
+        }
+      }  
+  
+ }
+ /*========== SMALL DEVICE MEDIA QUERIES ===========*/
+ @media screen and (max-width: 600px) {
+    
+    .featuredProducts {
+        outline: solid red 2px;
+        overflow: hidden;
+        margin: 10 0 0 0;
+        align-items: center;
+        
+    
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            left: 0;
+            right: 0;
+            margin: auto; 
+        }
+      }  
+ }
