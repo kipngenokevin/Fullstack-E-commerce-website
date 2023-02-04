@@ -72,13 +72,26 @@
  @media screen and (max-width: 600px) {
 
     .card {
+        outline: solid green 2px;
         display: flex;
         flex-direction: column;
+        width: 120px;
+        height: 200px;
+        justify-content: space-between;
+        gap: 0;
         .image {
-            height: 250px;
+            height: 80%;
             img {
                 height: 100%;
                 width: 100%;
+            }
+        }
+        h2 {
+            font-size: smaller;
+        }
+        .prices {
+            h3 {
+                font-size: smaller;
             }
         }
     }
