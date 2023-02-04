@@ -1,0 +1,80 @@
+.contact {
+
+    background: #2879fe;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+        width: 50%;
+        .mail {
+           display: flex;
+           gap: 1.8rem;
+            input {
+                padding: 10px;
+                border: none;
+                border-radius: 0.3rem;
+                min-width: 200px;
+            }
+            button {
+                background-color: black;
+                padding: 2px;
+                min-width: 100px;
+                border: none;
+                border-radius: 0.2rem;
+                color: white;
+            }
+        }
+        .icons {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    
+}
+
+/*========== MEDIUM DEVICE MEDIA QUERIES ===========*/
+@media  screen and (max-width:1024px) {
+    .contact{
+        font-size: 0.8rem;
+        justify-content: center;
+        .wrapper {
+            display: flex;
+            gap: 6px;
+            width: auto;
+            .mail {
+                gap: 0;
+                input {
+                    min-width: none;
+                }
+            }
+        }
+    }
+   
+  
+ }
+ /*========== SMALL DEVICE MEDIA QUERIES ===========*/
+ @media screen and (max-width: 600px) {
+    .contact{
+        font-size: 0.8rem;
+        justify-content: center;
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            .mail {
+                gap: 0;
+                input {
+                    min-width: none;
+                }
+            }
+        }
+    }
+   
+ }

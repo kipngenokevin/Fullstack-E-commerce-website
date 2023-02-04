@@ -1,5 +1,5 @@
 .featuredProducts {
-    outline: solid goldenrod 2px;
+    //outline: solid goldenrod 2px;
     margin: 100px 200px;
     .top {
         display: flex;
@@ -27,7 +27,7 @@
 /*========== MEDIUM DEVICE MEDIA QUERIES ===========*/
 @media  screen and (max-width:1024px) {
     .featuredProducts {
-        outline: solid red 2px;
+        //outline: solid red 2px;
         overflow: scroll;
         margin: 1rem 1rem;
 
