@@ -2,16 +2,35 @@
     margin-top: 10px;
     padding: 30px 20px;
     display: flex;
-    overflow: hidden;
+    //overflow: hidden;
     gap: 2rem;
     .left{
         //outline: solid yellow 2px;
-        flex: 1;
+        flex: 0.7;
+        padding: 20px;
+        position: sticky;
+        height: 100%;
+        top: 10px;
+
+        .filterItem {
+            margin-bottom: 20px;
+            h2{
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+
+            .inputitem {
+                margin-bottom: 10px;
+                label {
+                    margin-left: 10px;
+                }
+            }
+        }
 
     }
     .right {
         //outline: solid red 2px;
-        flex: 3;
+        flex: 3.3;
         .catImg {
             //outline: solid green 2px;
             width: 100%;
@@ -33,6 +52,7 @@
      gap: 0;
      .left {
         height: fit-content;
+        
         h2{
             font-size: smaller;
         }
@@ -58,6 +78,9 @@
  @media screen and (max-width: 600px) {
     .products {
         margin-top: 0px;
+        .left {
+            padding: 0;
+        }
     }
     
  }
