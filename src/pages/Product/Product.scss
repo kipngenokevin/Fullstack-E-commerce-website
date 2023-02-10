@@ -112,3 +112,80 @@
 
     }
 }
+
+/*========== MEDIUM DEVICE MEDIA QUERIES ===========*/
+@media  screen and (max-width:1024px) {
+   .product {
+        display: flex;
+    .left{
+        flex: 2;
+        width: fit-content;
+        .images {
+            flex: 2;
+            img {
+                height: max-content;
+            }
+
+        }
+        .mainImg {
+
+        }
+
+    }
+    .right {
+       gap: 2px;
+
+        .price {
+            font-size: 28px;
+        }
+        p {
+            font-size: small;
+        }
+        .quantity {
+
+        }
+        .links {
+            .item {
+
+            }
+            .info {
+
+            }
+        }
+
+    }
+   }
+
+}
+/*========== SMALL DEVICE MEDIA QUERIES ===========*/
+@media screen and (max-width: 600px) {
+    .product {
+        display: flex;
+    .left{
+        flex: 2;
+        width: fit-content;
+        .images {
+            flex: 2;
+            img {
+                height: max-content;
+            }
+
+        }
+        .mainImg {
+
+        }
+
+    }
+    .right {
+       gap: 2px;
+
+        .price {
+            font-size: 28px;
+        }
+        p {
+            font-size: small;
+        }
+    }
+   }
+ 
+}
