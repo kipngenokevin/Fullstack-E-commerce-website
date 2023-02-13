@@ -4,97 +4,46 @@ import './List.scss'
 
 const List = () => {
 
-    const data = [
-        {
-          id: 1,
-          img: 'https://images.pexels.com/photos/7755459/pexels-photo-7755459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          img2: 'https://images.pexels.com/photos/8580001/pexels-photo-8580001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          title: 'Summer Dress',
-          isNew: true,
-          oldPrice: 13,
-          price: 9.99
-        },
-        {
-          id: 2,
-          img: 'https://images.pexels.com/photos/12698490/pexels-photo-12698490.jpeg?auto=compress&cs=tinysrgb&w=1600',
-          title: 'Kimono dress',
-          oldPrice: 25,
-          price: 23
-        },
-        {
-          id: 3,
-          img: 'https://images.pexels.com/photos/12560384/pexels-photo-12560384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          title: 'Sheath dress',
-          oldPrice: 30,
-          price: 29
-        },
-        {
-          id: 4,
-          img: 'https://images.pexels.com/photos/9580324/pexels-photo-9580324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          title: 'Spotted top',
-          oldPrice: 15.5,
-          price: 14.45
-        },
-        {
-          id: 5,
-          img: 'https://images.pexels.com/photos/6794112/pexels-photo-6794112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          title: 'Ankara top',
-          oldPrice: 23,
-          price: 12.30
-        },
-        {
-         id: 6,
-          img: 'https://images.pexels.com/photos/12698490/pexels-photo-12698490.jpeg?auto=compress&cs=tinysrgb&w=1600',
-          title: 'Kimono dress',
-          oldPrice: 25,
-          price: 23
-        },
-        {
-          id: 7,
-          img: 'https://images.pexels.com/photos/7755459/pexels-photo-7755459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          img2: 'https://images.pexels.com/photos/8580001/pexels-photo-8580001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          title: 'Summer Dress',
-          isNew: true,
-          oldPrice: 13,
-          price: 9.99
-        },
-        {
-          id: 8,
-          img: 'https://images.pexels.com/photos/12698490/pexels-photo-12698490.jpeg?auto=compress&cs=tinysrgb&w=1600',
-          title: 'Kimono dress',
-          oldPrice: 25,
-          price: 23
-        },
-        {
-          id: 9,
-          img: 'https://images.pexels.com/photos/12560384/pexels-photo-12560384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          title: 'Sheath dress',
-          oldPrice: 30,
-          price: 29
-        },
-        {
-          id: 10,
-          img: 'https://images.pexels.com/photos/9580324/pexels-photo-9580324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          title: 'Spotted top',
-          oldPrice: 15.5,
-          price: 14.45
-        },
-        {
-          id: 11,
-          img: 'https://images.pexels.com/photos/6794112/pexels-photo-6794112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          title: 'Ankara top',
-          oldPrice: 23,
-          price: 12.30
-        },
-        {
-         id: 12,
-          img: 'https://images.pexels.com/photos/12698490/pexels-photo-12698490.jpeg?auto=compress&cs=tinysrgb&w=1600',
-          title: 'Kimono dress',
-          oldPrice: 25,
-          price: 23
-        },
-        
-      ]
+  const data = [
+    {
+      id: 1,
+      img: 'https://www.bragmybags.to/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/y/c/ycc24gonon.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      img2: 'https://www.bragmybags.to/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/y/c/ycc24gonon-1.jpg',
+      title: 'Saint Laurent College Medium All Black Matelasse Leather Bag',
+      oldPrice: 23,
+      price: 12.30
+    },
+    {
+      id: 2,
+      img: 'http://www.hothandbag.cn/UploadFile/20220225/JIL SANDER-shoes-JSX00019-02.jpg?auto=compress&cs=tinysrgb&w=1600',
+      img2: 'http://www.hothandbag.cn/UploadFile/20220225/JIL SANDER-shoes-JSX00019-01.jpg?auto=compress&cs=tinysrgb&w=1600',
+      title: 'Jil Sander shoes JSX00019 Heel 8CM',
+      oldPrice: 25,
+      price: 23
+    },
+    {
+      id: 3,
+      img: 'http://www.hothandbag.cn/UploadFile/20220407/Audemars Piguet-Watch-APW00079-2-01.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      title: 'Audemars Piguet Watch APW00079-2',
+      oldPrice: 30,
+      price: 29
+    },
+    {
+      id: 4,
+      img: 'https://www.bragmybags.to/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/y/h/yhs32grta.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      title: 'Saint Laurent Small Sac de Jour Souple Bag In Taupe Grained Leather',
+      oldPrice: 15.5,
+      price: 14.45
+    },
+    {
+      id: 5,
+      img: 'http://www.hothandbag.cn/UploadFile/20200129/Hermes-Bracelet-HM6398.jpg',
+      title: 'Hermes Bracelet HM6398',
+      oldPrice: 23,
+      price: 12.30
+    },
+    
+  ]
 
   return (
     <div className='list'> 

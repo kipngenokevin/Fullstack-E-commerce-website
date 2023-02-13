@@ -9,9 +9,9 @@ const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const data = [
-    'https://images.pexels.com/photos/5698981/pexels-photo-5698981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'https://images.pexels.com/photos/6923263/pexels-photo-6923263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'https://images.pexels.com/photos/6659411/pexels-photo-6659411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'   
+    'http://www.hothandbag.cn/UploadFile/20220803/Valentino-Shoes-VOS00131-1.jpg',
+    'http://www.hothandbag.cn/UploadFile/20220803/Valentino-Shoes-VOS00143-1.jpg',
+    'http://www.hothandbag.cn/UploadFile/20220608/Vacheron Constantin-Watch-VTW00020-4-1.jpg'   
   ];
 
   const prevSlide = () => {

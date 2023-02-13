@@ -26,25 +26,20 @@ const Navbar = () => {
       <div className='wrapper'>     
         <div className='left'>
           <div className="item">
-            <img src='https://img.icons8.com/color/31/null/kenya.png' alt='English Pound' />
-            <KeyboardArrowDownIcon />
+            <Link className='link' to='/products/1'>Bags</Link>
           </div>
           <div className="item">
-            <span>KES</span>
-            <KeyboardArrowDownIcon />
+            <Link className='link' to='/products/1'>Watches</Link>
           </div>
           <div className="item">
-            <Link className='link' to='/products/1'>Women</Link>
+            <Link className='link' to='/products/2'>Jewlery</Link>
           </div>
           <div className="item">
-            <Link className='link' to='/products/2'>Men</Link>
-          </div>
-          <div className="item">
-            <Link className='link' to='/products/3'>Children</Link>
+            <Link className='link' to='/products/3'>Shoes</Link>
           </div>
         </div>
         <div className='center'>
-          <Link className='link' to='/'>CHERUSTORE</Link>
+          <Link className='link' to='/'>FASHION FINDS</Link>
         </div>
         <div className='right'>
           <div className='item'>

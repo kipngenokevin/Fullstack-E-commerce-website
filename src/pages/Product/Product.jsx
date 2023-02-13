@@ -10,8 +10,8 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1)
 
   const images = [
-    "https://images.pexels.com/photos/6311012/pexels-photo-6311012.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/6311079/pexels-photo-6311079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    'https://www.bragmybags.to/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/y/c/ycc24gonon.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://www.bragmybags.to/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/y/c/ycc24gonon-1.jpg',
 
   ]
 
