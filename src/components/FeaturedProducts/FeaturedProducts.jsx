@@ -1,67 +1,32 @@
-import React from 'react'
-import './FeaturedProducts.scss'
-import Card from '../Card/Card'
+import React from "react";
+import Card from "../Card/Card";
+import "./FeaturedProducts.scss";
+import useFetch from "../../hooks/useFetch";
 
-const FeaturedProducts = ({type}) => {
-
-  const data = [
-    {
-      id: 1,
-      img: 'https://www.bragmybags.to/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/y/c/ycc24gonon.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      img2: 'https://www.bragmybags.to/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/y/c/ycc24gonon-1.jpg',
-      title: 'Saint Laurent College Medium All Black Matelasse Leather Bag',
-      oldPrice: 23,
-      price: 12.30
-    },
-    {
-      id: 2,
-      img: 'http://www.hothandbag.cn/UploadFile/20220225/JIL SANDER-shoes-JSX00019-02.jpg?auto=compress&cs=tinysrgb&w=1600',
-      img2: 'http://www.hothandbag.cn/UploadFile/20220225/JIL SANDER-shoes-JSX00019-01.jpg?auto=compress&cs=tinysrgb&w=1600',
-      title: 'Jil Sander shoes JSX00019 Heel 8CM',
-      oldPrice: 25,
-      price: 23
-    },
-    {
-      id: 3,
-      img: 'http://www.hothandbag.cn/UploadFile/20220407/Audemars Piguet-Watch-APW00079-2-01.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Audemars Piguet Watch APW00079-2',
-      oldPrice: 30,
-      price: 29
-    },
-    {
-      id: 4,
-      img: 'https://www.bragmybags.to/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/y/h/yhs32grta.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Saint Laurent Small Sac de Jour Souple Bag In Taupe Grained Leather',
-      oldPrice: 15.5,
-      price: 14.45
-    },
-    {
-      id: 5,
-      img: 'http://www.hothandbag.cn/UploadFile/20200129/Hermes-Bracelet-HM6398.jpg',
-      title: 'Hermes Bracelet HM6398',
-      oldPrice: 23,
-      price: 12.30
-    },
-    
-  ]
+const FeaturedProducts = ({ type }) => {
+  const { data, loading, error } = useFetch(`/products?populate=*&[filters][type][$eq]=${type}`);
 
   return (
-    <div className='featuredProducts'>
+    <div className="featuredProducts">
       <div className="top">
-        <h1>{type} Products</h1>
+        <h1>{type} products</h1>
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tellus eros, suscipit quis vulputate non, tincidunt quis mi. 
-        Integer tempus arcu efficitur, euismod lectus nec, vestibulum neque. Sed sit amet felis eget purus vehicula lacinia nec in dolor. 
-        Praesent mattis venenatis efficitur. Etiam a turpis finibus, semper nibh id, finibus mauris. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+          lacus vel facilisis labore et dolore magna aliqua. Quis ipsum
+          suspendisse ultrices gravida. Risus commodo viverra maecenas.
         </p>
       </div>
       <div className="bottom">
-        {data.map(item=>(
-          <Card item={item} key={item.id}/>
-        ))}
+        {error
+          ? "Something went wrong!"
+          : loading
+          ? "loading"
+          : data?.map((item) => <Card item={item} key={item.id} />)}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FeaturedProducts
+export default FeaturedProducts;
