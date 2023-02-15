@@ -1,15 +1,27 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import List from '../../components/List/List'
+import useFetch from "../../hooks/useFetch"
 import './Products.scss'
 
 const Products = () => {
 
   const catId = parseInt(useParams().id)
-
   const [maxPrice, setMaxPrice] = useState(10000)
-
   const [sort, setSort] = useState(null)
+
+  const [selectedSubCats, setSelectedSubCats] = useState([])
+
+  const {data, loading, error} = useFetch(`/subcategories?[filters][categories][id][$eq]=${catId}`)
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    const isChecked = e.target.checked;
+
+    setSelectedSubCats(isChecked ? [...selectedSubCats, value] : selectedSubCats.filter(item=>item !==value))
+  }
+
+  
 
   return (
     <div className='products'>
@@ -20,20 +32,14 @@ const Products = () => {
 
           {/*====== Input category checkboxes */}
 
-          <div className="inputitem">
-            <input type="checkbox" id="1" value={1} />
-            <label htmlFor="1">Shoes</label>
-          </div>
+          {data?.map((item) => (
+            <div className="inputItem" key={item.id}>
+              <input type="checkbox" id={item.id} value={item.id} onChange={handleChange}/>
+              <label htmlFor={item.id}>{item.attributes.title}</label>
+            </div>
+          ))}
+          
 
-          <div className="inputitem">
-            <input type="checkbox" id="2" value={1} />
-            <label htmlFor="2">Skirts</label>
-          </div>
-
-          <div className="inputitem">
-            <input type="checkbox" id="3" value={1} />
-            <label htmlFor="3">Coats</label>
-          </div>
 
           {/*======= End of category checkboxes*/}
 
@@ -65,7 +71,7 @@ const Products = () => {
       {/*===== The product section ====*/}
       <div className="right">
         <img className='catImg' src='https://images.pexels.com/photos/1204464/pexels-photo-1204464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt=''/>
-        <List catId={catId} maxPrice={maxPrice} sort={sort}/>
+        <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats}/>
       </div>
       {/*==== End of product section =====*/}
     </div>
