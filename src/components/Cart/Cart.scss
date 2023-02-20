@@ -26,6 +26,10 @@
             height: 100px;
             object-fit: cover;
         }
+        .delete {
+            color: red;
+            cursor: pointer;
+        }
     }
 
     .details{
@@ -41,10 +45,7 @@
         .price {
             color: #2879fe;
         }
-        .delete {
-            color: red;
-            cursor: pointer;
-        }
+       
     }
 
     .total {
