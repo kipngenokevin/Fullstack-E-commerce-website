@@ -34,6 +34,7 @@ const Product = () => {
                 onClick={(e) => setSelectedImg("Product_Image_File_1")}
                  />
               <img src={data?.attributes?.Product_Image_File_2} alt='' onClick={(e) => setSelectedImg("Product_Image_File_2")} />
+              <img src={data?.attributes?.Product_Image_File_3} alt='' onClick={(e) => setSelectedImg("Product_Image_File_3")} />
             </div>
             <div className="mainImg">
             <img src={data?.attributes?.[selectedImg]}/>
@@ -42,12 +43,10 @@ const Product = () => {
           </div>
 
           <div className="right">
-            <h1>Title</h1>
-            <span className='price'>$199</span>
+            <h1>{data?.attributes?.Product_Name}</h1>
+            <span className='price'>${data?.attributes?.Sale_Price}</span>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed pharetra urna, eget dictum arcu.
-              Nunc lorem mauris, fermentum vitae purus vitae, lacinia euismod augue.
-              Donec gravida dolor vitae purus suscipit venenatis. Morbi ut lobortis eros. Maecenas sed dapibus felis.
+            {data?.attributes?.Product_Description}
             </p>
             <div className="quantity">
               <button onClick={() => setQuantity((prev) => prev === 1 ? 1 : prev - 1)}>-</button>
@@ -67,9 +66,9 @@ const Product = () => {
             </div>
 
             <div className="info">
-              <span>Vendor: Polo</span>
-              <span>Product Type: Hoodie</span>
-              <span>Tag: T-Shirt, Women, Top</span>
+              <span>Vendor: {data?.attributes?.Brand_Name}</span>
+              <span>Product Type: {data?.attributes?.Child_Category}</span>
+              <span>Tag: {data?.attributes?.Grandchild_Category}</span>
             </div>
             <hr />
             <div className="info">
