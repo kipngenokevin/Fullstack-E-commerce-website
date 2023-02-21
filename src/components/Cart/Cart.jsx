@@ -4,6 +4,7 @@ import './Cart.scss'
 import {useSelector} from 'react-redux'
 import { removeItem, resetCart } from '../../redux/cartReducer';
 import {useDispatch} from 'react-redux'
+import {Routes, Route, useNavigate} from 'react-router-dom';
 
 const Cart = () => {
 
@@ -14,6 +15,11 @@ const Cart = () => {
     products.forEach(item=>total+=item.quantity * item.price)
     return total.toFixed(2)
   }
+  const navigate = useNavigate();
+  const navigateToCheckout = () => {
+    // 👇️ navigate to /contacts
+    navigate('/checkout');
+  };
 
   return (
     <div className='cart'>
@@ -36,7 +42,7 @@ const Cart = () => {
             <span>SUBTOTAL</span>
             <span>${totalPrice()}</span>
         </div>
-        <button>PROCEED TO CHECKOUT</button>
+        <button onClick={navigateToCheckout}>PROCEED TO CHECKOUT</button>
         <span className="reset" onClick={()=>dispatch(resetCart())}>Reset Cart</span>
     </div>
   )

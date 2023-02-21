@@ -135,8 +135,12 @@
     .right {
        gap: 2px;
 
+       h1 {
+        font-size: 18px;
+       }
+
         .price {
-            font-size: 28px;
+            font-size: 12px;
         }
         p {
             font-size: small;

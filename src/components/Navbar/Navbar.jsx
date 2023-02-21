@@ -7,7 +7,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
 import Cart from '../Cart/Cart';
-import {useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import './Navbar.scss'
 
@@ -16,58 +16,47 @@ import './Navbar.scss'
 const Navbar = () => {
 
   const [open, setOpen] = useState(false)
-  const products = useSelector(state=>state.cart.products)
+  const products = useSelector(state => state.cart.products)
 
 
   return (
     <div className='navbar'>
       <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle" class="menu">
-          <MenuIcon/>
-      </label>   
-      <div className='wrapper'>     
-        <div className='left'>
+        <MenuIcon />
+      </label>
+      <div className='wrapper'>
+        <div className='center'>
+          <Link className='link' to='/'>FASHION FINDS</Link>
+          <p>"We do not just deliver a product,  We deliver an experience!"</p>
+        </div>
+        <div className='right'>
+
           <div className="item">
             <Link className='link' to='/products/1'>Bags</Link>
           </div>
           <div className="item">
-            <Link className='link' to='/products/1'>Watches</Link>
+            <Link className='link' to='/products/2'>Watches</Link>
           </div>
           <div className="item">
-            <Link className='link' to='/products/2'>Jewlery</Link>
+            <Link className='link' to='/products/3'>Jewlery</Link>
           </div>
           <div className="item">
-            <Link className='link' to='/products/3'>Shoes</Link>
+            <Link className='link' to='/products/4'>Shoes</Link>
           </div>
-        </div>
-        <div className='center'>
-          <Link className='link' to='/'>FASHION FINDS</Link>
-        </div>
-        <div className='right'>
-          <div className='item'>
-            <Link className='link' to='/'>HomePage</Link>
-          </div>
-          <div className='item'>
-            <Link className='link' to='/'>About</Link>
-          </div>
-          <div className='item'>
-            <Link className='link' to='/'>Contact</Link>
-          </div>
-          <div className='item'>
-            <Link className='link' to='/'>Stores</Link>
-          </div>
+
           <div className="icons">
-            <SearchIcon/>
-            <PersonOutlineOutlinedIcon/>
-            <FavoriteBorderOutlinedIcon/>
-            <div className="cartIcon" onClick={()=>setOpen(!open)}>
-              <ShoppingCartOutlinedIcon/>
+            <SearchIcon />
+            <PersonOutlineOutlinedIcon />
+            <FavoriteBorderOutlinedIcon />
+            <div className="cartIcon" onClick={() => setOpen(!open)}>
+              <ShoppingCartOutlinedIcon />
               <span>{products.length}</span>
             </div>
           </div>
         </div>
       </div>
-      {open && <Cart/>}
+      {open && <Cart />}
     </div>
   )
 }

@@ -3,6 +3,7 @@ import Products from '../src/pages/Products/Products'
 import Product from '../src/pages/Product/Product'
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Checkout from './pages/checkout/Checkout';
 import './app.scss' 
 import {
   createBrowserRouter,
@@ -38,6 +39,10 @@ const router = createBrowserRouter ([
       {
         path: '/product/:id',
         element: <Product/>
+      },
+      {
+        path: '/checkout',
+        element: <Checkout/>
       },
     ]
   }

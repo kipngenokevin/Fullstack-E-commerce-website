@@ -3,22 +3,28 @@ import './Slider.scss'
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 
+
 // Import Swiper styles
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+
+
   const data = [
-    'http://www.hothandbag.cn/UploadFile/20220803/Valentino-Shoes-VOS00131-1.jpg',
-    'http://www.hothandbag.cn/UploadFile/20220803/Valentino-Shoes-VOS00143-1.jpg',
-    'http://www.hothandbag.cn/UploadFile/20220608/Vacheron Constantin-Watch-VTW00020-4-1.jpg'   
+    'https://images.pexels.com/photos/3682293/pexels-photo-3682293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/3682236/pexels-photo-3682236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/266621/pexels-photo-266621.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/7716934/pexels-photo-7716934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+
+     
   ];
 
   const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? 2 : (prev) => prev - 1);
+    setCurrentSlide(currentSlide === 0 ? 3 : (prev) => prev - 1);
   };
   const nextSlide = () => {
-    setCurrentSlide(currentSlide === 2 ? 0 : (prev) => prev + 1);
+    setCurrentSlide(currentSlide === 3 ? 0 : (prev) => prev + 1);
   };
 
 
@@ -28,6 +34,7 @@ const Slider = () => {
         <img src={data[0]} alt=''/>
         <img src={data[1]} alt=''/>
         <img src={data[2]} alt=''/>
+        <img src={data[3]} alt=''/>
       </div>
       <div className="icons">
         <div className="icon" onClick={prevSlide}>

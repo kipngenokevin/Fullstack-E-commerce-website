@@ -70,7 +70,7 @@ const Products = () => {
 
       {/*===== The product section ====*/}
       <div className="right">
-        <img className='catImg' src='https://images.pexels.com/photos/1204464/pexels-photo-1204464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt=''/>
+        <img className='catImg' src='https://images.pexels.com/photos/4127641/pexels-photo-4127641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt=''/>
         <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats}/>
       </div>
       {/*==== End of product section =====*/}

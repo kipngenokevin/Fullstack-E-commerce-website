@@ -7,7 +7,7 @@ const Category = () => {
         <div className='categories'>
             <div className="col">
                 <div className="row">
-                    <img src="http://www.hothandbag.cn/UploadFile/20140605/MCM-Small-Flag-of-UK-Backpack-MC5173S-Beige_1.jpg" alt="" />
+                    <img src="https://images.pexels.com/photos/4830925/pexels-photo-4830925.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     <button>
                         <Link className='link' to="/products/1">
                             New Arrival
@@ -15,7 +15,7 @@ const Category = () => {
                     </button>
                 </div>
                 <div className="row">
-                    <img src="http://www.hothandbag.cn/UploadFile/20211229/Chanel-Necklace-CN32706.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    <img src="https://images.pexels.com/photos/11655347/pexels-photo-11655347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     <button>
                         <Link className='link' to="/products/1">
                             Jewelry
@@ -25,10 +25,10 @@ const Category = () => {
             </div>
             <div className="col">
                 <div className="row">
-                    <img src="http://www.hothandbag.cn/UploadFile/20210825/miu-miu-Denim-Shoulder-Bag-5ND223-blue-0623.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    <img src="https://images.pexels.com/photos/4405244/pexels-photo-4405244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     <button>
                         <Link className='link' to="/products/1">
-                            Bags
+                            TIMELY
                         </Link>
                     </button>
                 </div>
@@ -37,30 +37,30 @@ const Category = () => {
                 <div className="row">
                     <div className="col">
                         <div className="row">
-                            <img src="http://www.hothandbag.cn/UploadFile/20191123/Miu-Miu-Shoes-MIUMIU714TZC-3_1.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                            <img src="https://images.pexels.com/photos/998521/pexels-photo-998521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                             <button>
                                 <Link className='link' to="/products/1">
-                                    Shoes
+                                    CLASS
                                 </Link>
                             </button>
                         </div>
                     </div>
                     <div className="col">
                         <div className="row">
-                            <img src="https://images.pexels.com/photos/6786616/pexels-photo-6786616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                            <img src="https://images.pexels.com/photos/8891959/pexels-photo-8891959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                             <button>
                                 <Link className='link' to="/products/1">
-                                    Best Price
+                                    STYLE
                                 </Link>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div className="row">
-                    <img src= "http://www.hothandbag.cn/UploadFile/20141114/Rolex-Day-Date-Replica-Watch-RO8008L_1.jpg" alt="" />
+                    <img src= "https://images.pexels.com/photos/1228626/pexels-photo-1228626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     <button>
                         <Link className='link' to="/products/1">
-                            Watches
+                            COMFORT
                         </Link>
                     </button>
                 </div>
