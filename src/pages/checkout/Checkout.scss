@@ -1,0 +1,95 @@
+.checkout {
+    display: flex;
+    justify-content: center;
+    //outline: 2px solid green;
+    gap: 1rem;
+    padding: 15px;
+    margin: 10px;
+    padding: 50px;
+
+    .left{
+        flex: 2;
+        padding: 15px;
+        outline: 2px solid grey;
+        //background: ;
+        .item{
+            display: flex;
+            gap: 2rem;
+            padding: 10px;
+            align-items: center;
+            .details {
+                flex: 2;
+                h1 {
+                    font-size: small;
+                    font-weight: 500;
+                }
+                p {
+                    font-size: small;
+                    font-weight: 100;
+                }
+                .price {
+                    font-size: small;
+                    color: #2879fe;
+                }
+            }
+            
+            img {
+                height: 150px;
+                width: 150px;
+            }
+            .delete {
+                flex: 1;
+                color: red;
+                cursor: pointer;
+            }
+        }
+        .total {
+            font-weight: 400;
+            color: #2879fe;
+        }
+        .reset {
+            color: red;
+            cursor: pointer;
+        }
+
+    }
+    .right {
+        flex: 2;
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            //outline: 3px solid grey;
+            padding: 10px;
+            button {
+                color: white;
+                background: #2879fe;
+                height: 50px;
+                border: none;
+                border-radius: 4px;
+                font-size: 18px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+
+    }
+    
+}
+/*====================MEDIA QUERIES===========*/
+@media  screen and (max-width:1024px) {
+    .checkout{
+        display: flex;
+        padding: 0;
+        margin: 10px;
+    }
+
+}
+/*====================MEDIA QUERIES===========*/
+@media  screen and (max-width:600px) {
+    .checkout{
+        display: flex;
+        flex-direction: column;
+    }
+}
