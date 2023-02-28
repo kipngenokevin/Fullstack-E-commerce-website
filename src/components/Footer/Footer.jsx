@@ -7,11 +7,10 @@ const Footer = () => {
       <div className="top">
         <div className="item">
           <h4>Categories</h4>
-          <span>Women</span>
-          <span>Men</span>
+          <span>Bags</span>
           <span>Shoes</span>
-          <span>Accessories</span>
-          <span>New Arrivals</span>
+          <span>Watches</span>
+          <span>Jewelry</span>
         </div>
         <div className="item">
           <h4>Links</h4>
@@ -24,27 +23,26 @@ const Footer = () => {
         <div className="item">
           <h4>About</h4>
           <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum id nibh ac ultricies. 
-            Aenean lobortis libero quis fringilla consectetur. Ut ac pretium enim. Ut eu neque pretium, varius nulla varius, egestas magna. 
-            Sed placerat nulla sed mauris iaculis finibus. Morbi augue nisl, condimentum vel mauris eget, porttitor elementum velit.
+          We're a fashion and lifestyle brand that curate and promote the best products among thousands in the market to gift you the most innovative ones that you probably never heard about before.
+          <br></br>
+          <br></br>
+          What we do? 
           </span>
         </div>
         <div className="item">
           <h4>Contact</h4>
           <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum id nibh ac ultricies. 
-            Aenean lobortis libero quis fringilla consectetur. Ut ac pretium enim. Ut eu neque pretium, varius nulla varius, egestas magna. 
-            Sed placerat nulla sed mauris iaculis finibus. Morbi augue nisl, condimentum vel mauris eget, porttitor elementum velit.
+           Email: doreenrita123@gmail.com
           </span>
         </div>
       </div>
       <div className="bottom">
         <div className="left">
-          <span className="logo">Cherustore</span>
+          <span className="logo">Fashion FInds</span>
           <span className="copyright">&#169; Copyright 2023. All rights reserved.</span>
         </div>
         <div className="right">
-          <img src='/img/payment.png' alt=''/>
+          <img src='' alt=''/>
         </div>
       </div>
     </div>

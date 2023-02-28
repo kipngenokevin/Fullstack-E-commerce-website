@@ -63,7 +63,6 @@ const Checkout = () => {
             placeholder: 'Email',
             errorMessage:'Please enter a valid email address',
             label: 'Email',
-            required: true
         },
         {
             id:5,
@@ -139,6 +138,7 @@ const Checkout = () => {
                 <div className='payment'>
                     <h3>Payment Methods</h3>
                     <p>Payment is on Delivery</p>
+                    <p>Click here to <a href="doreenrita123@gmail.com"> send mail </a>and follow up on your order</p>
                     
                 </div>
 

@@ -10,25 +10,7 @@ const Category = () => {
                     <img src="https://images.pexels.com/photos/4830925/pexels-photo-4830925.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     <button>
                         <Link className='link' to="/products/1">
-                            New Arrival
-                        </Link>
-                    </button>
-                </div>
-                <div className="row">
-                    <img src="https://images.pexels.com/photos/11655347/pexels-photo-11655347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                    <button>
-                        <Link className='link' to="/products/1">
-                            Jewelry
-                        </Link>
-                    </button>
-                </div>
-            </div>
-            <div className="col">
-                <div className="row">
-                    <img src="https://images.pexels.com/photos/4405244/pexels-photo-4405244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                    <button>
-                        <Link className='link' to="/products/1">
-                            TIMELY
+                            Bags
                         </Link>
                     </button>
                 </div>
@@ -37,7 +19,7 @@ const Category = () => {
                 <div className="row">
                     <div className="col">
                         <div className="row">
-                            <img src="https://images.pexels.com/photos/998521/pexels-photo-998521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                            <img src="https://images.pexels.com/photos/9982469/pexels-photo-9982469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                             <button>
                                 <Link className='link' to="/products/1">
                                     CLASS
@@ -47,9 +29,9 @@ const Category = () => {
                     </div>
                     <div className="col">
                         <div className="row">
-                            <img src="https://images.pexels.com/photos/8891959/pexels-photo-8891959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                            <img src="https://images.pexels.com/photos/11034410/pexels-photo-11034410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                             <button>
-                                <Link className='link' to="/products/1">
+                                <Link className='link' to="/products/2">
                                     STYLE
                                 </Link>
                             </button>
