@@ -29,13 +29,15 @@ const Products = () => {
         <div className="filterItem">
 
           <h2>Product Categories</h2>
+          <p>Check these boxes to filter your items</p>
+          <br></br>
 
           {/*====== Input category checkboxes */}
 
           {data?.map((item) => (
             <div className="inputItem" key={item.id}>
               <input type="checkbox" id={item.id} value={item.id} onChange={handleChange}/>
-              <label htmlFor={item.id}>{item.attributes.title}</label>
+              <label htmlFor={item.id}> {item.attributes.title}</label>
             </div>
           ))}
           

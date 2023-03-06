@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Footer.scss'
 
 const Footer = () => {
@@ -7,10 +8,10 @@ const Footer = () => {
       <div className="top">
         <div className="item">
           <h4>Categories</h4>
-          <span>Bags</span>
-          <span>Shoes</span>
-          <span>Watches</span>
-          <span>Jewelry</span>
+          <Link to='products/1'>Bags</Link>
+          <Link to='products/2'>Shoes</Link>
+          <Link to='products/3'>Watches</Link>
+          <Link to='products/4'>Jewelry</Link>
         </div>
         <div className="item">
           <h4>Links</h4>
@@ -32,7 +33,7 @@ const Footer = () => {
         <div className="item">
           <h4>Contact</h4>
           <span>
-           Email: doreenrita123@gmail.com
+           Email: 
           </span>
         </div>
       </div>

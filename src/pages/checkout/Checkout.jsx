@@ -7,6 +7,7 @@ import { removeItem, resetCart } from '../../redux/cartReducer';
 import { useDispatch } from 'react-redux'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { Hidden } from '@mui/material';
 
 
 const Checkout = () => {
@@ -16,8 +17,9 @@ const Checkout = () => {
     const dispatch = useDispatch()
     const products = useSelector(state => state.cart.products)
     console.log(products)
-    const map = new Map(products.map((obj) => [obj.id, obj.title]));
+    const map= new Map(products.map((obj) => [obj.price, obj.title]));
     console.log(map)
+    console.log(map.title)
     
     const totalPrice = () => {
         let total = 0
@@ -34,7 +36,11 @@ const Checkout = () => {
         email: '',
         phone: '',
         Location: '',
-        Order: map
+        Order: 'map'
+    })
+
+    const [value, SetOrder] = useState ({
+        Order: ''
     })
 
 
@@ -65,7 +71,7 @@ const Checkout = () => {
             label: 'Email',
         },
         {
-            id:5,
+            id:4,
             name: 'Phone',
             type: 'text',
             placeholder: 'Phone Number',
@@ -74,13 +80,19 @@ const Checkout = () => {
             pattern: "^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$",
         },
         {
-            id:6,
+            id:5,
             name: 'Location',
             type: 'text',
             placeholder: 'Location',
             errorMessage:'',
             label: 'Address'
-        }      
+        } ,
+        {
+            id:6,
+            name: 'Order',
+            type: 'textarea',
+            hidden: true
+        }     
 
 
     ]
@@ -92,8 +104,8 @@ const Checkout = () => {
     const sendEmail = (e) => {
         e.preventDefault();
         // service_id, templte_id and public key will get from Emailjs website when you create account and add template service and email service 
-        emailjs.sendForm('service_16i8b08', 'YOUR_TEMPLATE_ID', form.current, 
-        'YOUR_PUBLIC_KEY')
+        emailjs.sendForm('service_16i8b08', 'template_qa1u30a', form.current, 
+        'b7nGxZhvRW1XQI9hh')
           .then((result) => {
               console.log(result.text);
           }, (error) => {
@@ -137,7 +149,8 @@ const Checkout = () => {
                 <span className="reset" onClick={() => dispatch(resetCart())}>Reset Cart</span>
                 <div className='payment'>
                     <h3>Payment Methods</h3>
-                    <p>Payment is on Delivery</p>
+                    <p>Payment is before Delivery</p>
+                    {/*======= Email =======*/}
                     <p>Click here to <a href="doreenrita123@gmail.com"> send mail </a>and follow up on your order</p>
                     
                 </div>
