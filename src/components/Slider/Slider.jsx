@@ -2,12 +2,19 @@ import React, { useState } from 'react'
 import './Slider.scss'
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
+import {Routes, Route, useNavigate} from 'react-router-dom';
 
 
 // Import Swiper styles
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const navigate = useNavigate();
+  const navigateToProducts = () => {
+    // 👇️ navigate to /products
+    navigate('/products/1');
+  };
 
 
 
@@ -39,7 +46,7 @@ const Slider = () => {
       <div className='landing-text'>
           <h1> We Understand Style</h1>
           <h4> Discover a new world of class</h4>
-          <button>Start Shopping</button>
+          <button onClick={navigateToProducts}>Start Shopping</button>
       </div>
       <div className="icons">
         <div className="icon" onClick={prevSlide}>
