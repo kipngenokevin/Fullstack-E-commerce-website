@@ -5,6 +5,11 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Checkout from './pages/checkout/Checkout';
 import Success from './pages/Success/Success';
+import About from './pages/About/About'
+import Privacy from './pages/Privacy/Privacy'
+import Return from './pages/Return/Return'
+import Shipping from './pages//Shipping/Shipping'
+import Terms from './pages/Terms/Terms'
 import './app.scss' 
 import {
   createBrowserRouter,
@@ -48,6 +53,26 @@ const router = createBrowserRouter ([
       {
         path: '/success',
         element: <Success/>
+      },
+      {
+        path: '/about-us',
+        element: <About/>
+      },
+      {
+        path: '/privacy-policy',
+        element: <Privacy/>
+      },
+      {
+        path: '/return-policy',
+        element: <Return/>
+      },
+      {
+        path: '/shipping-policy',
+        element: <Shipping/>
+      },
+      {
+        path: '/terms-of-use',
+        element: <Terms/>
       },
     ]
   }

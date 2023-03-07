@@ -8,38 +8,30 @@ const Footer = () => {
       <div className="top">
         <div className="item">
           <h4>Categories</h4>
-          <Link to='products/1'>Bags</Link>
-          <Link to='products/2'>Shoes</Link>
-          <Link to='products/3'>Watches</Link>
-          <Link to='products/4'>Jewelry</Link>
+          <Link className='link' to='products/1'>Bags</Link>
+          <Link className='link' to='products/2'>Shoes</Link>
+          <Link className='link' to='products/3'>Watches</Link>
+          <Link className='link' to='products/4'>Jewelry</Link>
         </div>
         <div className="item">
           <h4>Links</h4>
-          <span>FAQ</span>
-          <span>Pages</span>
-          <span>Stores</span>
-          <span>Compare</span>
-          <span>Cookies</span>
+          <Link className='link' to='about-us'>About Us</Link>
+          <Link className='link' to='privacy-policy'>Privacy Policy</Link>
+          <Link className='link' to='return-policy'>Return Policy</Link>
+          <Link className='link' to='shipping-policy'>Shipping Policy</Link>
+          <Link className='link' to='terms-of-use'>Terms Of Use</Link>
         </div>
         <div className="item">
-          <h4>About</h4>
+          <h4>At a Glance</h4>
           <span>
           We're a fashion and lifestyle brand that curate and promote the best products among thousands in the market to gift you the most innovative ones that you probably never heard about before.
           <br></br>
-          <br></br>
-          What we do? 
-          </span>
-        </div>
-        <div className="item">
-          <h4>Contact</h4>
-          <span>
-           Email: 
           </span>
         </div>
       </div>
       <div className="bottom">
         <div className="left">
-          <span className="logo">FashionfInds</span>
+          <span className="logo">Fashionfinds</span>
           <span className="copyright">&#169; Copyright 2023. All rights reserved.</span>
         </div>
         <div className="right">
