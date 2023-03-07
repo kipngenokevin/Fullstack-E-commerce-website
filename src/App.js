@@ -4,6 +4,7 @@ import Product from '../src/pages/Product/Product'
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Checkout from './pages/checkout/Checkout';
+import Success from './pages/Success/Success';
 import './app.scss' 
 import {
   createBrowserRouter,
@@ -43,6 +44,10 @@ const router = createBrowserRouter ([
       {
         path: '/checkout',
         element: <Checkout/>
+      },
+      {
+        path: '/success',
+        element: <Success/>
       },
     ]
   }

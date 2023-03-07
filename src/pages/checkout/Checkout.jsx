@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Hidden } from '@mui/material';
+import {Routes, Route, useNavigate} from 'react-router-dom';
 
 
 const Checkout = () => {
@@ -98,6 +99,12 @@ const Checkout = () => {
 
     ]
 
+    const navigate = useNavigate();
+    const navigateToSuccess = () => {
+      // 👇️ navigate to /contacts
+      navigate('/success');
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault()
     }
@@ -109,6 +116,9 @@ const Checkout = () => {
         'b7nGxZhvRW1XQI9hh')
           .then((result) => {
               console.log(result.text);
+              navigateToSuccess();
+              dispatch(resetCart());
+
           }, (error) => {
               console.log(error.text);
           });
