@@ -17,9 +17,10 @@ const Checkout = () => {
     const dispatch = useDispatch()
     const products = useSelector(state => state.cart.products)
     console.log(products)
-    const map= new Map(products.map((obj) => [obj.price, obj.title]));
-    console.log(map)
-    console.log(map.title)
+    const map= new Map(products.map((obj) => [obj.id, obj.title, obj.price]));
+    //console.log(map)
+    var obj = Object.fromEntries(map);
+    var jsonString = JSON.stringify(obj);
     
     const totalPrice = () => {
         let total = 0
@@ -36,7 +37,7 @@ const Checkout = () => {
         email: '',
         phone: '',
         Location: '',
-        Order: 'map'
+        Order: jsonString
     })
 
     const [value, SetOrder] = useState ({
@@ -116,7 +117,7 @@ const Checkout = () => {
     const onChange = (e) => {
         setValues({...values, [e.target.name]:e.target.value})
     }
-    console.log(values)
+    //console.log(values)
 
     return (
         <div className='checkout'>
@@ -151,7 +152,6 @@ const Checkout = () => {
                     <h3>Payment Methods</h3>
                     <p>Payment is before Delivery</p>
                     {/*======= Email =======*/}
-                    <p>Click here to <a href="doreenrita123@gmail.com"> send mail </a>and follow up on your order</p>
                     
                 </div>
 
