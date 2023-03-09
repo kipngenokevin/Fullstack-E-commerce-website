@@ -50,7 +50,7 @@ const Navbar = () => {
               <SearchIcon/>
               <FavoriteBorderOutlinedIcon/>
               <PersonOutlineOutlinedIcon/>
-            <div className="cartIcon" onMouseEnter={() => setOpen(!open)} onClick={() => setOpen(!open)}>
+            <div className="cartIcon" onClick={() => setOpen(!open)}>
               <ShoppingCartOutlinedIcon />
               <span>{products.length}</span>
             </div>

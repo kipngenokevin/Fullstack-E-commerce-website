@@ -1,14 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import List from '../../components/List/List'
 import useFetch from "../../hooks/useFetch"
+import ReactDOM from 'react-dom';
+import ReactPaginate from 'react-paginate';
 import './Products.scss'
+import { MenuItem } from '@mui/material';
+
 
 const Products = () => {
 
   const catId = parseInt(useParams().id)
-  const [maxPrice, setMaxPrice] = useState(10000)
+  const [maxPrice, setMaxPrice] = useState(1000)
+  const [pageNumber, setPageNumber] = useState(1)
   const [sort, setSort] = useState('asc')
+  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
   const [selectedSubCats, setSelectedSubCats] = useState([])
 
@@ -25,7 +31,11 @@ const Products = () => {
 
   return (
     <div className='products'>
+    <label for="menu-tap" class="menu">
+        <MenuItem/>
+      </label>
       <div className="left">
+      
         <div className="filterItem">
 
           <h2>Product Categories</h2>
@@ -50,7 +60,7 @@ const Products = () => {
           <h2>Filter by price</h2>
           <div className="inputitem">
             <span>0</span>
-            <input type="range" min={0} max={10000} onChange={(e)=>setMaxPrice(e.target.value)}/>
+            <input type="range" min={0} max={1000} onChange={(e)=>setMaxPrice(e.target.value)}/>
             <span>{maxPrice}</span>
           </div>
         </div>
@@ -72,8 +82,14 @@ const Products = () => {
 
       {/*===== The product section ====*/}
       <div className="right">
-        <img className='catImg' src='https://images.pexels.com/photos/4127641/pexels-photo-4127641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt=''/>
-        <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats}/>
+        {/*<img className='catImg' src='https://images.pexels.com/photos/4127641/pexels-photo-4127641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt=''/>*/}
+        <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} pageNumber={pageNumber}/>
+        <div className='pagenav'>
+          <button onClick={() => setPageNumber((prev) => prev === 1 ? 1 : prev - 1)}>Previous</button>
+          <span> Page {pageNumber}</span>
+          <button onClick={() => setPageNumber((prev) => prev + 1)}>Next</button>
+        </div>
+
       </div>
       {/*==== End of product section =====*/}
     </div>

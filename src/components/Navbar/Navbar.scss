@@ -123,10 +123,17 @@
 @media screen and (max-width: 600px) {
    
     .navbar {
+        gap: 0px;
+        //outline: 2px solid green;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100vw;
         .menu {
             display: block;
             padding: 1.1rem 1.22rem 0;
             font-size: 2rem;
+            //outline: 2px solid red;
         }
 
 
@@ -160,7 +167,7 @@
                 //outline: 2px solid red;
                 left: 0;
                 text-align: center;
-                margin-left: 6%;
+                margin-left: 8%;
                 p{
                     font-size: 10px;
                 }

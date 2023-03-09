@@ -76,12 +76,15 @@
         //outline: solid green 2px;
         display: flex;
         flex-direction: column;
-        width: 120px;
-        height: 200px;
+        width: 100px;
+        height: 150px;
         justify-content: space-between;
         gap: 0;
+        padding: 0;
         .image {
-            height: 80%;
+            padding: 0;
+            min-height: 80%;
+            //outline: 2px red solid;
             img {
                 height: 100%;
                 width: 100%;
