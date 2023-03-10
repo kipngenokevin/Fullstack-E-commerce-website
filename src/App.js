@@ -10,6 +10,7 @@ import Privacy from './pages/Privacy/Privacy'
 import Return from './pages/Return/Return'
 import Shipping from './pages//Shipping/Shipping'
 import Terms from './pages/Terms/Terms'
+import { useEffect } from 'react';
 import './app.scss' 
 import {
   createBrowserRouter,
@@ -20,6 +21,9 @@ import {
 
 
 const Layout = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className='app'>
       <Navbar/>

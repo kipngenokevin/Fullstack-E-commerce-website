@@ -10,11 +10,15 @@ import { MenuItem } from '@mui/material';
 
 const Products = () => {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const catId = parseInt(useParams().id)
   const [maxPrice, setMaxPrice] = useState(1000)
   const [pageNumber, setPageNumber] = useState(1)
   const [sort, setSort] = useState('asc')
-  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 
   const [selectedSubCats, setSelectedSubCats] = useState([])
 
@@ -46,7 +50,7 @@ const Products = () => {
 
           {data?.map((item) => (
             <div className="inputItem" key={item.id}>
-              <input type="checkbox" id={item.id} value={item.id} onChange={handleChange}/>
+              <input type="checkbox" id={item.id} value={item.id} onChange={handleChange} onClick={e=>setPageNumber(1)}/>
               <label htmlFor={item.id}> {item.attributes.title}</label>
             </div>
           ))}
@@ -68,7 +72,7 @@ const Products = () => {
           <h2>Sort by</h2>
             
           <div className="inputitem">
-            <input type='radio' id='asc' value='asc' name='price' onChange={e=>setSort("asc")}/>
+            <input type='radio' id='asc' value='asc' name='price' onChange={e=>setSort("asc")} onClick={e=>setPageNumber(1)}/>
             <label htmlFor='asc'>Price(Lowest First)</label>
           </div>
 
